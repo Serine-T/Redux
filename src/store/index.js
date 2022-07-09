@@ -1,21 +1,14 @@
-import {createStore} from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
+import cardsSlice from './slices/categoriesSlice';
+import catsSlice from './slices/catsSlice';
+import routesSlice from './slices/routesSlice';
 
-const reducerFn = (state={counter: 0}, action)=>{
-
-    if(action.type === 'INC'){
-        return {counter: state.counter + 1}
-    }
-    if(action.type === 'DEC'){
-        return {counter: state.counter - 1}
-    }
-    if(action.type === 'ADD'){
-        return {counter: state.counter + action.payload}
-    }
-
-
-    return state;
-}
-const store = createStore(reducerFn);
+const store = configureStore({
+  reducer: {
+    categories: cardsSlice.reducer,
+    cats: catsSlice.reducer,
+    routes: routesSlice.reducer,
+  },
+});
 
 export default store;
-

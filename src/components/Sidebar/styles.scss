@@ -1,0 +1,18 @@
+.sidebar-wrapper {
+  position: fixed;
+  width: 140px;
+  height: 1002px;
+  left: 0px;
+  top: 0px;
+  background: #FFE4D6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 84px 15px 15px;
+
+  .active-page {
+    a {
+      color: green;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-wrapper {
+  @media (max-width: 450px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.btn {
+  min-width: 150px;
+  letter-spacing: .5px;
+  height: 36px;
+  line-height: 36px;
+  text-transform: capitalize;
+  margin: 5px 0;
+  padding: 0 10px;
+  background-color: transparent;
+  outline: none;
+  color: #817d7d;
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+
+  &:hover {
+    border-color: #1890ff;
+    color: #1890ff;
+  }
+}
+
+.page-title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 59px;
+  color: #000000;
+}

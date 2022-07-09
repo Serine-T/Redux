@@ -1,28 +1,28 @@
-import { useSelector, useDispatch } from 'react-redux';
-
+import React from 'react';
+import './App.scss';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/HomeContainer';
+import routeItems from './helpers/constants/routeItems';
 
 function App() {
-  const counter = useSelector(state => state.counter);
-  const dispatch = useDispatch();
-
-  const increament = ()=>{
-    dispatch({type: 'INC'})
-  }
-  const decreament = ()=>{
-    dispatch({type: 'DEC'})
-  }
-
-  const addBy = ()=>{
-    dispatch({type: 'ADD', payload: 10})
-  }
-
   return (
-    <div className="App">
-      <h1>Counter App</h1>
-      <h2>{counter}</h2>
-      <button onClick={increament}>Increament</button>
-      <button onClick={decreament}>Decreament</button>
-      <button onClick={addBy}>AddBy 10</button>
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} exact />
+          {
+            routeItems.map((route) => {
+              return (
+                <Route
+                  key={route.key}
+                  path={route.path}
+                  element={route.component}
+                />
+              );
+            })
+          }
+        </Routes>
+      </Router>
     </div>
   );
 }
