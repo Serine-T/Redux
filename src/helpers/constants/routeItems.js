@@ -2,7 +2,7 @@ import React from 'react';
 import CourseContainer from '../../pages/CourseContainer';
 import DocumentContainer from '../../pages/DocumentContainer';
 import UsersContainer from '../../pages/UsersContainer';
-import { DashboardIcon, DocumentIcon, UsersIcon } from './sidebarIcons';
+import { DashboardIcon, DocumentIcon, UsersIcon } from '../../components/Sidebar/sidebarIcons';
 
 const routeItems = [
   {

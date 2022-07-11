@@ -1,10 +1,10 @@
 import React from 'react';
-import Main from '../components/Main.js/Main';
+import Main from '../components/Main.js';
 
 const DocumentContainer = () => (
-  <Main>
+  <Main isStandardContainer>
     <div>
-      <h3 className="page-title">Document Page</h3>
+      <p>Content is not available yet</p>
     </div>
   </Main>
 );

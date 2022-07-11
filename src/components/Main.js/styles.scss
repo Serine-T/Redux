@@ -1,6 +1,15 @@
 .component-wrapper {
-  width: calc(100vw - 240px);
-  margin: 0 20px;
+  width: calc(100vw - 120px);
   padding: 15px 30px;
-  margin-left: 180px;
+  margin-left: 120px;
+
+  @media (max-width: 768px) {
+    width: calc(100vw - 100px);
+    margin-left: 100px;
+  }
+
+  @media (max-width: 480px) {
+    width: calc(100vw - 60px);
+    margin-left:60px;
+  }
 }

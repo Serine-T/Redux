@@ -1,18 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const routesSlice = createSlice({
-  name: 'route',
+  name: 'routes',
   initialState: {
-    key: 'courses',
-    title: 'courses',
-    path: '/courses',
+    currentRoute: {
+      key: '',
+      title: '',
+    }
   },
   reducers: {
-    setRoute(state, action) {
-      state.currentRoute = action.payload;
+    setRoute(state, { payload }) {
+      state.currentRoute = payload;
     },
   },
 });
 
-export const routesActions = routesSlice.actions;
+export const { setRoute } = routesSlice.actions;
 export default routesSlice;

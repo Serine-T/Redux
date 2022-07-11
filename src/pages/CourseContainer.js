@@ -1,9 +1,9 @@
 import React from 'react';
-import Courses from '../components/Courses/Courses';
-import Main from '../components/Main.js/Main';
+import Courses from '../components/Courses';
+import Main from '../components/Main.js';
 
 const CourseContainer = () => (
-  <Main>
+  <Main isStandardContainer={false}>
     <Courses />
   </Main>
 );

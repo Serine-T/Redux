@@ -1,9 +1,9 @@
 import React from 'react';
-import Main from '../components/Main.js/Main';
+import Main from '../components/Main.js';
 
 const UsersContainer = () => (
-  <Main>
-    <h3 className="page-title">Users Page</h3>
+  <Main isStandardContainer>
+    <p>Content is not available yet</p>
   </Main>
 );
 

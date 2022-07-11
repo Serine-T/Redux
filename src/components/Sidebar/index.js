@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const Sidebar = () => {
-  const isCurrentRoute = useSelector(state => state.routes);
+  const isCurrentRoute = useSelector(state => state.routes?.currentRoute);
 
   return (
     <div className="sidebar-wrapper">
@@ -15,7 +15,7 @@ const Sidebar = () => {
             return (
               <li key={item.key} className={`${isCurrentRoute.key === item.key ? 'active-page' : ''}`}>
                 <Link to={item.path}>
-                  <div className="sidebar-icon">{item.icon()} {item.key}</div>
+                  <div className="sidebar-icon">{item.icon()}</div>
                 </Link>
               </li>
             );

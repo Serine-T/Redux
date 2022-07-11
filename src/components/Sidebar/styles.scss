@@ -1,7 +1,7 @@
 .sidebar-wrapper {
   position: fixed;
-  width: 140px;
-  height: 1002px;
+  width: 120px;
+  min-height: 100vh;
   left: 0px;
   top: 0px;
   background: #FFE4D6;
@@ -11,8 +11,37 @@
   padding: 84px 15px 15px;
 
   .active-page {
-    a {
-      color: green;
+    position: relative;
+    
+    svg {
+      path {
+        fill: #8964D7;
+      }
     }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 28px;
+      background-color:#8964D7;
+      left: calc(-100% - 15px);
+
+      @media(max-width: 768px) {
+        left: calc(-100% - 5px);
+      }
+    }
+  }
+
+  .sidebar-icon {
+    margin: 20px 0;
+  }
+
+  @media(max-width: 768px) {
+    width: 100px;
+  }
+
+  @media(max-width: 480px) {
+    width: 60px;
   }
 }

@@ -1,13 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import cardsSlice from './slices/categoriesSlice';
-import catsSlice from './slices/catsSlice';
+import coursesSlice from './slices/coursesSlice.';
 import routesSlice from './slices/routesSlice';
 
 const store = configureStore({
   reducer: {
-    categories: cardsSlice.reducer,
-    cats: catsSlice.reducer,
     routes: routesSlice.reducer,
+    courses: coursesSlice.reducer
   },
 });
 

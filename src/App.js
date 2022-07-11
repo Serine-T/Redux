@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/HomeContainer';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import routeItems from './helpers/constants/routeItems';
 
 function App() {
@@ -9,7 +8,8 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} exact />
+          <Route path="/" element={<Navigate replace to="/courses" />} />
+          
           {
             routeItems.map((route) => {
               return (
