@@ -1,0 +1,28 @@
+.sidebar-wrapper {
+  width: 200px;
+  padding: 15px;
+  margin-right: 20px;
+
+  .sidebar-title {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  .category-name {
+    min-width: 150px;
+    letter-spacing: .5px;
+    height: 36px;
+    line-height: 36px;
+    text-transform: capitalize;
+    margin: 5px 0;
+    background-color: transparent;
+    outline: none;
+    color: #817d7d;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+  }
+
+  .current-category {
+    color: #1890ff;
+  }
+}
